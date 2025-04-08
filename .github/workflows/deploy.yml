@@ -2,7 +2,7 @@ name: Deploy Eleventy to GitHub Pages
 
 on:
   push:
-    branches: [main]  # or 'master' if that’s your default branch
+    branches: [main]
 
 jobs:
   build:
@@ -18,13 +18,16 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build Eleventy site
         run: npx eleventy
+
+      - name: Add .nojekyll file
+        run: touch public/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public   # Or ./_site if that's your output dir
+          publish_dir: ./public
