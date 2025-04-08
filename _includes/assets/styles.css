@@ -1,0 +1,263 @@
+/* core styles */
+:root {
+    --peach: #FBBFA5;
+    --gold: #FFD166;
+    --coral: #FF6B6B;
+    --sage:rgb(111, 165, 126);
+    --deepsage: #4b7d59;
+    --cream: #FFF9F4;
+    --text: #2E2E2E;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--cream);
+    color: var(--text);
+    padding: 1.5rem;
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--deepsage);
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+    color: var(--sage);
+    margin-top: 0.5rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .card {
+    background-color: white;
+    border: 2px solid var(--gold);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+  }
+
+  .card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--coral);
+  }
+
+  .card p {
+    font-size: 0.95rem;
+    color: #444;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #888;
+  }
+
+ /* navbar stuff */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+  }
+  
+  .nav-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--deepsage);
+    cursor: default;
+    text-decoration: none;
+    cursor: default;
+  }
+
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: var(--deepsage);
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--sage);
+  }
+  
+
+  /* Responsive tweak */
+  @media (max-width: 600px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-top: 0.5rem;
+    }
+  }
+  
+  /* welcome, welcome layout */
+  .intro-section {
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .intro-text {
+    margin-left: 2rem;
+    flex: 1;
+    min-width: 260px;
+  }
+
+  h1{
+    position: relative;
+    font-size: 30px;
+    font-style: italic;
+    color: var(--sage);
+  } 
+
+  .intro-photo {
+    flex: 1;
+    min-width: 260px;
+    text-align: center;
+  }
+  
+  .intro-photo img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  }
+  
+
+/* a poloriod backdrop */
+
+.polaroid {
+    background-color: #fff;
+    padding: 1rem 1rem 0.5rem; /* extra space at bottom for caption */
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(70, 69, 69, 0.15);
+    text-align: center;
+    max-width: 320px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .polaroid img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+  }
+  
+  .caption {
+    font-size: 1.2rem;
+    font-family: 'Caveat', cursive;
+    color:rgb(96, 96, 96);
+    margin-top: 0.75rem;
+  }
+  
+  .caption2{
+    padding-left: 3rem;
+  }
+
+  /* About Page */ 
+
+  .about-section {
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .about-text {
+    margin-left: 2rem;
+    flex: 1;
+    min-width: 260px;
+  }
+
+  .about-photo {
+    flex: 1;
+    max-width: 260px;
+    text-align: center;
+    padding-right: 50px;
+  }
+
+
+  /* CONNECT LINKS */
+
+  .lets-connect{
+    text-align: center;
+  }    
+  
+  .connect {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .connect a {
+    text-decoration: none;
+    color: var(--deepsage);
+    font-weight: 500;
+    transition: color 0.2s ease;
+    font-size: 20px;
+  }
+  
+  .connect a:hover {
+    color: var(--sage);
+  }
+
+
+  /* FOOTER */
+  
+  footer{
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+  }
+
+
+  .content {
+    min-height: 100%;  /* Ensure the content area can grow */
+    padding-bottom: 50px;  /* Make space for the footer */
+    
+  }
