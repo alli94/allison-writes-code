@@ -1,3 +1,4 @@
+# Allison Writes Code (a blog and portfolio of sorts)
 Learning how to build my own responsive website using html, css, 
 a sprinkling of javascript, and figuring out how to use a crm for 
 easier blog hosting. Nunjucks is intense at first (ahaha many 
