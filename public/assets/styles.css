@@ -10,7 +10,7 @@
   }
 
   body {
-    margin: 0;
+    margin: 0, 4;
     font-family: 'DM Sans', sans-serif;
     background-color: var(--cream);
     color: var(--text);
@@ -19,7 +19,6 @@
     flex-direction: column;
     min-height: 100vh;
   }
-
 
   header {
     text-align: center;
@@ -32,7 +31,7 @@
     color: var(--deepsage);
   }
 
-  .tagline {
+  /* .tagline {
     font-size: 1.1rem;
     color: var(--sage);
     margin-top: 0.5rem;
@@ -66,7 +65,7 @@
   .card p {
     font-size: 0.95rem;
     color: #444;
-  }
+  } */
 
   footer {
     text-align: center;
@@ -78,14 +77,13 @@
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0.75rem 1.5rem;
   }
  /* navbar stuff */
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.75rem 1.5rem;
     border-radius: 12px;
     margin-bottom: 1rem;
   }
@@ -138,12 +136,11 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    margin-top: 1rem;
     flex-wrap: wrap;
+    margin: 0, 4rem;
   }
   
   .intro-text {
-    margin-left: 2rem;
     flex: 1;
     min-width: 260px;
   }
@@ -156,18 +153,47 @@
   } 
 
   .intro-photo {
-    flex: 1;
+    position: relative; /* Needed for stacking */
+
+  }
+
+ .image, .imagehover{
+    position: absolute;
     min-width: 225px;
-    hight: auto;
+    height: auto;
     text-align: center;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .image{
+    z-index: 2;
+    opacity: 1;
   }
   
+  .imagehover{
+    position: relative;
+    flex: 1;
+    min-width: 225px;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+  
+  }
   .intro-photo img {
     max-width: 100%;
     border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   }
   
+  .intro-photo:hover .image {
+    opacity: 0;
+  }
+  
+  .intro-photo:hover .imagehover {
+    opacity: 1;
+    
+  }
+
 
 /* a poloriod backdrop */
 
@@ -176,7 +202,6 @@
     padding: 1rem 1rem 0.5rem; /* extra space at bottom for caption */
     border-radius: 6px;
     box-shadow: 0 8px 20px rgba(70, 69, 69, 0.15);
-    text-align: center;
     max-width: 320px;
     margin: 0 auto;
     position: relative;
@@ -193,6 +218,34 @@
     font-family: 'Caveat', cursive;
     color:rgb(96, 96, 96);
     margin-top: 0.75rem;
+    
+  }
+
+  .caption.image,
+.caption.imagehover {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.caption.image {
+  z-index: 2;
+  opacity: 1;
+  position: absolute;
+
+}
+.caption.imagehover {
+  z-index: 1;
+  opacity: 0;
+  position: relative;
+}
+
+  .intro-photo:hover .caption.image {
+    opacity: 0;
+  }
+  
+  .intro-photo:hover .caption.imagehover {
+    opacity: 1;
   }
   
   .caption2{
@@ -207,7 +260,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    margin-top: 3rem;
+    margin: 0, 4rem;
     flex-wrap: wrap;
   }
 
@@ -256,9 +309,9 @@
   }
 
 
-  /* FOOTER */
+/* FOOTER */
   
-  footer{
+footer{
     position: relative;
     width: 100%;
     bottom: 0;
