@@ -1,6 +1,6 @@
 ---
 title: My First Article
-author: Kevin Powell
+author: Allison
 date: 2021-05-01
 tags: ["post", "featured"]
 image: /assets/images/ocean-profile.png

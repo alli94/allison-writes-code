@@ -1,6 +1,6 @@
 ---
 title: My Second Article
-author: Kevin Powell
+author: Allison
 date: 2021-05-15
 tags: ["post", "featured"]
 image: /assets/images/market-profile.png
