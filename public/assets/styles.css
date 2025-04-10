@@ -31,41 +31,48 @@
     color: var(--deepsage);
   }
 
-  /* .tagline {
+  .tagline {
     font-size: 1.1rem;
     color: var(--sage);
     margin-top: 0.5rem;
   }
 
-  .grid {
+  /* Card Containers */
+
+  .card-container {
+    margin-top: 5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
   }
 
   .card {
     background-color: white;
-    border: 2px solid var(--gold);
-    border-radius: 10px;
-    padding: 1rem 1.25rem;
+    border: 3px solid var(--sage);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    text-align: center;
     box-shadow: 0 3px 6px rgba(0,0,0,0.05);
     transition: transform 0.2s ease;
+    cursor: pointer;
   }
-
   .card:hover {
     transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
   }
 
   .card h3 {
     margin: 0 0 0.5rem;
-    color: var(--coral);
+    color: var(--deepsage);
   }
 
   .card p {
     font-size: 0.95rem;
     color: #444;
-  } */
+  }
+
 
   footer {
     text-align: center;
@@ -75,10 +82,14 @@
   }
 
   .container {
-    max-width: 1200px;
+    max-width: 80rem;
     margin: 0 auto;
     padding: 0.75rem 1.5rem;
+
   }
+
+
+
  /* navbar stuff */
   .navbar {
     display: flex;
@@ -271,11 +282,15 @@
     margin-bottom: 75px;
   }
 
-  .about-photo {
+  .about-photo{
     flex: 1;
     max-width: 260px;
     text-align: center;
     padding-right: 50px;
+  }
+
+  .about-photo img{
+        box-shadow: 0 8px 20px rgba(70, 69, 69, 0.15);
   }
 
 
@@ -330,3 +345,130 @@ footer{
     border-radius: 12px;
     
   }
+
+
+/*article snippits*/
+
+.section-title {
+  margin-bottom: 50px;
+  
+}
+
+.snippet {
+  display: grid;
+  gap: 1em;
+  margin-bottom: 50px;
+  grid-template-areas:
+    "image"
+    "title"
+    "meta"
+    "body"
+    "button";
+}
+
+.snippet__image {
+  grid-area: image;
+  width: 70%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+
+}
+.snippet__title {
+  grid-area: title;
+}
+.snippet__meta {
+  grid-area: meta;
+  color: var(--text);
+}
+
+.snippet__meta span {
+  color: var(--sage);
+}
+
+.snippet .btn {
+  grid-area: button;
+}
+
+.snippet__title {
+  color: var(--deepsage);
+  font-size: 25px;
+}
+
+.snippet__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.snippet__title a:hover,
+.snippet__title a:focus {
+  color: var(--sage);
+} 
+
+@media (min-width: 45em) {
+  .snippet {
+    grid-template-areas:
+      "title image"
+      "meta image"
+      "body image"
+      "button image";
+    grid-column-gap: 4em;
+    grid-template-columns: 1fr, 40%;
+    grid-template-rows: min-content min-content min-content 1fr;
+    
+  }
+}
+
+.btn {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.75em 1.75em;
+  border-radius: 0.25em;
+  align-self: start;
+  justify-self: start;
+}
+
+
+.btn--primary {
+  background: var(--deepsage);
+  color: white;
+}
+.btn--primary:hover,
+.btn--primary:focus {
+  background: var(--sage);
+}
+
+
+
+
+
+
+/* //////////////////////
+  RESET - source: https://piccalil.li/blog/a-modern-css-reset
+  /////////////////////// */
+
+
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul:where([role="list"]),
+ol:where([role="list"]) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
