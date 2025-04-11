@@ -10,7 +10,7 @@ layout: 'base.njk'
     </p>
   </div>
     
-    <div class="polaroid">
+  <div class="polaroid">
     <div class="intro-photo">
       <img src="assets/images/market-profile.png" alt="Smiling at the camera" class="image" />
       <img src="assets/images/ocean-profile.png" alt="Looking for Fuji" class="imagehover" />
@@ -19,13 +19,7 @@ layout: 'base.njk'
     </div>
   </div>
 
-  <!-- link to recent blog posts -->
-   {# <div class="flex-group">
-          <a href="#featured-articles" class="btn btn--primary">Featured articles</a>
-          <a href="./blog.html" class="btn btn--neutral">Most recent articles</a>
-        </div> #}
-
-         <div class="card-container">
+  <div class="card-container">
     <div class="card" onclick="location.href='/about'">
       <h2>About Me 🪴</h2>
       <p>Learn more about my background, passions, and coding journey.</p>
@@ -36,11 +30,25 @@ layout: 'base.njk'
     </div>
     <div class="card" onclick="location.href='/blog'">
       <h2>Blog 👩🏼‍💻</h2>
-      <p>Read my up on my current wips and how I'm planning to build my dream app.</p>
+      <p>Read up on my current wips and how I'm planning to build my dream app.</p>
     </div>
     <div class="card" onclick="location.href='#'">
       <h2>(un)Tangled 🧶</h2>
       <p>Follow the development of my stich glossary for fiber artists and hobbyists!</p>
     </div>
   </div>
+
 </section> 
+
+  <!-- Featured posts -->
+
+<section id="featured-articles" class="featured-articles">
+  <div class="container flow">
+    <h1 class="section-title text-center ">Featured articles</h1>
+   <ul role="list" class="articles__list flow">
+  {%- for post in collections.featured | reverse -%} <!--may need to    adjust-->
+  {% include "article-snippet.njk" %}
+  {%- endfor %}
+</ul>
+  </div>
+</section>

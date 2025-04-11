@@ -1,5 +1,5 @@
 /* core styles */
-:root {
+  :root {
     --peach: #FBBFA5;
     --gold: #FFD166;
     --coral: #FF6B6B;
@@ -8,7 +8,7 @@
     --cream: #FFF9F4;
     --text: #2E2E2E;
   }
-
+ 
   body {
     margin: 0, 4;
     font-family: 'DM Sans', sans-serif;
@@ -22,7 +22,7 @@
 
   header {
     text-align: center;
-    padding: 1rem 1rem 1rem;
+    padding: 2rem;
   }
 
   .logo {
@@ -37,7 +37,7 @@
     margin-top: 0.5rem;
   }
 
-  /* Card Containers */
+/* Card Containers */
 
   .card-container {
     margin-top: 5rem;
@@ -45,7 +45,7 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
   }
 
   .card {
@@ -73,7 +73,6 @@
     color: #444;
   }
 
-
   footer {
     text-align: center;
     margin-top: 3rem;
@@ -88,9 +87,11 @@
 
   }
 
+  .container--narrow {
+    max-width: 65rem;
+  }
 
-
- /* navbar stuff */
+/* navbar stuff */
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -108,7 +109,6 @@
     cursor: default;
   }
 
-  
   .nav-links {
     list-style: none;
     display: flex;
@@ -129,7 +129,7 @@
   }
   
 
-  /* Responsive tweak */
+/* Responsive tweak */
   @media (max-width: 600px) {
     .nav-links {
       flex-direction: column;
@@ -140,7 +140,7 @@
     }
   }
   
-  /* welcome, welcome layout */
+/* welcome, welcome layout */
   .intro-section {
     padding: 0.75rem 1.5rem;
     display: flex;
@@ -156,12 +156,17 @@
     min-width: 260px;
   }
 
-  h1{
+  .intro-text h1{
     position: relative;
     font-size: 30px;
-    font-style: italic;
     color: var(--sage);
+    font-style: italic;
   } 
+
+  h1 {
+    font-size: 30px;
+    color: var(--sage);
+  }
 
   .intro-photo {
     position: relative; /* Needed for stacking */
@@ -208,9 +213,9 @@
 
 /* a poloriod backdrop */
 
-.polaroid {
+  .polaroid {
     background-color: #fff;
-    padding: 1rem 1rem 0.5rem; /* extra space at bottom for caption */
+    padding: 1rem 1rem 2rem; /* extra space at bottom for caption */
     border-radius: 6px;
     box-shadow: 0 8px 20px rgba(70, 69, 69, 0.15);
     max-width: 320px;
@@ -229,27 +234,27 @@
     font-family: 'Caveat', cursive;
     color:rgb(96, 96, 96);
     margin-top: 0.75rem;
-    
   }
 
   .caption.image,
-.caption.imagehover {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-}
+  .caption.imagehover {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
 
-.caption.image {
-  z-index: 2;
-  opacity: 1;
-  position: absolute;
+  .caption.image {
+    z-index: 2;
+    opacity: 1;
+    position: absolute;
 
-}
-.caption.imagehover {
-  z-index: 1;
-  opacity: 0;
-  position: relative;
-}
+  }
+
+  .caption.imagehover {
+    z-index: 1;
+    opacity: 0;
+    position: relative;
+  }
 
   .intro-photo:hover .caption.image {
     opacity: 0;
@@ -263,7 +268,7 @@
     padding-left: 3rem;
   }
 
-  /* About Page */ 
+/* About Page */ 
 
   .about-section {
     padding: 0.75rem 1.5rem;
@@ -293,8 +298,7 @@
         box-shadow: 0 8px 20px rgba(70, 69, 69, 0.15);
   }
 
-
-  /* CONNECT LINKS */
+/* CONNECT LINKS */
 
   .lets-connect{
     text-align: center;
@@ -333,142 +337,158 @@ footer{
     margin-top: auto;
   }
 
-
   .content {
     padding: 0.75rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    /* gap: 1rem;
     margin-top: 2rem;
     flex-wrap: wrap;
-    border-radius: 12px;
+    border-radius: 12px; */
     
   }
-
 
 /*article snippits*/
 
-.section-title {
-  margin-bottom: 50px;
-  
-}
-
-.snippet {
-  display: grid;
-  gap: 1em;
-  margin-bottom: 50px;
-  grid-template-areas:
-    "image"
-    "title"
-    "meta"
-    "body"
-    "button";
-}
-
-.snippet__image {
-  grid-area: image;
-  width: 70%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-
-}
-.snippet__title {
-  grid-area: title;
-}
-.snippet__meta {
-  grid-area: meta;
-  color: var(--text);
-}
-
-.snippet__meta span {
-  color: var(--sage);
-}
-
-.snippet .btn {
-  grid-area: button;
-}
-
-.snippet__title {
-  color: var(--deepsage);
-  font-size: 25px;
-}
-
-.snippet__title a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.snippet__title a:hover,
-.snippet__title a:focus {
-  color: var(--sage);
-} 
-
-@media (min-width: 45em) {
-  .snippet {
-    grid-template-areas:
-      "title image"
-      "meta image"
-      "body image"
-      "button image";
-    grid-column-gap: 4em;
-    grid-template-columns: 1fr, 40%;
-    grid-template-rows: min-content min-content min-content 1fr;
+  .section-title {
+    margin-bottom: 50px;
     
   }
-}
 
-.btn {
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  line-height: 1;
-  padding: 0.75em 1.75em;
-  border-radius: 0.25em;
-  align-self: start;
-  justify-self: start;
-}
+  .snippet {
+    display: grid;
+    gap: 1em;
+    margin-bottom: 50px;
+    grid-template-areas:
+      "image"
+      "title"
+      "meta"
+      "body"
+      "button";
+  }
+
+  .snippet__image {
+    grid-area: image;
+    width: 70%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+
+  }
+  .snippet__title {
+    grid-area: title;
+  }
+  .snippet__meta {
+    grid-area: meta;
+    color: var(--text);
+  }
+
+  .snippet__meta span {
+    color: var(--sage);
+  }
+
+  .snippet .btn {
+    grid-area: button;
+  }
+
+  .snippet__title {
+    color: var(--deepsage);
+    font-size: 25px;
+  }
+
+  .snippet__title a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .snippet__title a:hover,
+  .snippet__title a:focus {
+    color: var(--sage);
+  } 
+
+  @media (min-width: 45em) {
+    .snippet {
+      grid-template-areas:
+        "title image"
+        "meta image"
+        "body image"
+        "button image";
+      grid-column-gap: 4em;
+      grid-template-columns: 1fr, 40%;
+      grid-template-rows: min-content min-content min-content 1fr;
+      
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+    padding: 0.75em 1.75em;
+    border-radius: 0.25em;
+    align-self: start;
+    justify-self: start;
+  }
 
 
-.btn--primary {
-  background: var(--deepsage);
-  color: white;
-}
-.btn--primary:hover,
-.btn--primary:focus {
-  background: var(--sage);
-}
+  .btn--primary {
+    background: var(--deepsage);
+    color: white;
+  }
 
+  .btn--primary:hover,
+  .btn--primary:focus {
+    background: var(--sage);
+  }
 
+/* Remove default margin */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
 
-
-
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul:where([role="list"]),
+  ol:where([role="list"]) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
 /* //////////////////////
-  RESET - source: https://piccalil.li/blog/a-modern-css-reset
+  Individual article page
   /////////////////////// */
 
 
+  .main-article {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 4rem;
+    padding: 0 5rem 0;
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
+  }
+
+  .main-article__figure {
+    margin: 1rem 1rem;
+    text-align: center;
+  }
+  .main-article__figure img{
+    width: 80%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover; 
+  }
+
+.featured-articles h1{
+  padding-top: 50px;
 }
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul:where([role="list"]),
-ol:where([role="list"]) {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
