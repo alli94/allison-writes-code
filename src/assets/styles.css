@@ -473,9 +473,7 @@ footer{
     margin-bottom: 3rem;
     display: flex;
     justify-content: center;
-    margin: 0 4rem;
-    padding: 0 5rem 0;
-
+    max-width: 1200px;
   }
 
   .main-article__figure {
@@ -483,7 +481,7 @@ footer{
     text-align: center;
   }
   .main-article__figure img{
-    width: 80%;
+    max-width: 75%;
     height: auto;
     aspect-ratio: 4 / 5;
     object-fit: cover; 
