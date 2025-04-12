@@ -481,7 +481,8 @@ footer{
     text-align: center;
   }
   .main-article__figure img{
-    max-width: 75%;
+    max-width: 500px;
+    width: 100%;
     height: auto;
     aspect-ratio: 4 / 5;
     object-fit: cover; 
