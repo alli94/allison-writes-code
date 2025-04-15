@@ -4,7 +4,7 @@ description: cms test
 author: Allison
 date: 2025-04-14T20:35:00.000Z
 tags:
-  - featured
+  - featuredpost
 image: /assets/uploads/to-helsinki.jpeg
 imageAlt: helsiki project
 ---
