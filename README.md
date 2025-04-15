@@ -14,15 +14,17 @@ posts to my site! It is SO COOL.
 ###April 15th, 2025
 
 Offically attached the CMS and fixed some CSS styling! It looks so much better now.
+
 ####Things to do next:
--format blog post/list cards to include tags
--fix overall post page... right now I have a white background and nothing else
--figure out how to add a commenting section for posts
--build out a new page to provide more information on my glossary project
--look into SEOs? Not too worried about this at the moment. 
--Figure out how to use Auth0 instead of Identity
+- format blog post/list cards to include tags
+- fix overall post page... right now I have a white background and nothing else
+- figure out how to add a commenting section for posts
+- build out a new page to provide more information on my glossary project
+- look into SEOs? Not too worried about this at the moment. 
+- Figure out how to use Auth0 instead of Identity
 
 ###April 10th, 2025
+
 OH MY the world of Nunjucks is wild... probably not the best first choice 
 for site building. However, following a Kevin Powell tutorial has been (mostly)
 straitforward. Running into a problem with presenting the markdown files for 
