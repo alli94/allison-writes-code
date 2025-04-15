@@ -11,11 +11,11 @@ figure out Auth0 just yet so at some point in the near future, I need to sort
 this out. All in all it feels so amazing to have a CMS that directly adds my
 posts to my site! It is SO COOL.
 
-###April 15th, 2025
+**April 15th, 2025**
 
 Offically attached the CMS and fixed some CSS styling! It looks so much better now.
 
-####Things to do next:
+**_Things to do next:_**
 - format blog post/list cards to include tags
 - fix overall post page... right now I have a white background and nothing else
 - figure out how to add a commenting section for posts
@@ -23,7 +23,7 @@ Offically attached the CMS and fixed some CSS styling! It looks so much better n
 - look into SEOs? Not too worried about this at the moment. 
 - Figure out how to use Auth0 instead of Identity
 
-###April 10th, 2025
+**April 10th, 2025**
 
 OH MY the world of Nunjucks is wild... probably not the best first choice 
 for site building. However, following a Kevin Powell tutorial has been (mostly)
