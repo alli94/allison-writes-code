@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+        <header> 
+        <nav class="navbar">
+        <div class="nav-logo"><a class="nav-logo" href="/index.html">Allison Writes Code &lt;/&gt;</a></div>
+        <ul class="nav-links">
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="https://github.com/alli94" target="_blank" rel="noopener noreferrer" class="fa-icon github"><i class="fab fa-github"></i></a></li>
+        <!--<li><a href="https://www.linkedin.com/in/allisonrm/" target="_blank" rel="noopener noreferrer"class="fa-icon linkedin"><i class="fab fa-linkedin-in"></i></a></li>-->
+        <li><a href="https://instagram.com/allisontravelshere" target="_blank" rel="noopener noreferrer" class="fa-icon instagram">
+            <i class="fab fa-instagram"></i>
+          </a></li>
+        </ul>
+        </header>
+    <main>
+        <div class="container">
+    
+<article class="main-article">
+<div class="container container--narrow flow">
+    <h1 class="article-title">
+      Hello World!
+    </h1> 
+        <p>Apr 14, 2025</p>
+    <figure class="main-article__figure">
+      <img src="/assets/images/us-workspace.JPG" alt="my workspace">
+    </figure>
+    
+    <p>Cheesy, I know. But here were are! I've finally managed to attach a CMS to my blog! It was not without it's struggles and many frustrating moments. I could use any and all advice on how to initiate Auth0 rather than the now depreciated Identity for Netlify within 11ty templating. Idk how the heck to do it as the documentation led me no where... maybe it would be better to link it via Vercel, where I initially hosted my site??
+<br>
+<br>
+I followed this fantastic <a href="https://www.youtube.com/watch?v=4wD00RT6d-g">tutorial</a> from Kevin Powell to initiate the blog and LOVED the way he broke down every step with such passion and encouragement. Big fan of his now and although I tried to make the code my own and host/use alternative CMS/use other platforms... I hit a wall.
+<br>
+<br>
+Learning to read documentation feels like I'm learning to read Korean for the first time. I see it, I understand it, but I don't know how to apply it to my code without fear of breaking it or forgetting what folders I've pasted code into. The simple <code>index.html/styles.css</code> days are over and while I'm excited, it's also quite a bit more challenging. I've also come to terms with the fact that I'm very visual with this type of stuff. Show me how to do it, and I got it. Make me read the Greek? It's gonna take a week to sort everything out.
+<br>
+<br>
+THAT BEING SAID: Kevin Powell I owe my entire site to your guidance. I built the initial front page layout with one baby <code>html</code> and <code>css</code> file using a bit of ChatGPT for the <code>css</code> portions (flexbox I love, grid I do not). And as much as I didn't want to use AI, I must confess there's a time and place for it. And only in that time in place, I might add... Quickly figured out when I could use it to help me and when I absolutely could not.
+<br>
+<br>
+So much more to say about this very new very baby site. Really like the Vercel vibes more as far as hosting goes, so I'm tempted to figure out how to do Auth0 over there next. Also gotta add a commenting feature because I'd love to be able to chat with you below! :D
+<br>
+<br>
+In the meantime, check out my socials and Github to stay updated on future changes and updates!</p>
+
+  
+</div>
+</article>
+
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Allison Writes Code — All thoughts, bugs, and breakthroughs are my own.</p>
+      </footer>
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

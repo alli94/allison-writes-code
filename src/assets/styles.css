@@ -350,97 +350,131 @@ footer{
   }
 
 /*article snippits*/
+.snippet {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+  padding: 0;
+  margin: 2rem;
+}
 
-  .section-title {
-    margin-bottom: 50px;
-    
+.snippet:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Content area (left side) */
+.snippet__content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Image wrapper with clickable link */
+.snippet__image-link {
+  display: block;
+  width: 33.333%; /* 1/3 of the card */
+  aspect-ratio: 4 / 3; 
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.snippet__image-link:hover {
+  opacity: 0.95;
+}
+
+/* Image styling (aspect ratio & clickable) */
+.snippet__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Title */
+.snippet__title {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  color: var(--deepsage);
+}
+
+.snippet__title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.snippet__title a:hover {
+  color: var(--sage);
+}
+
+/* Meta info */
+.snippet__meta {
+  font-size: 0.875rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.snippet__meta span {
+  font-weight: 500;
+  color: var(--text);
+}
+
+/* Body (description) */
+.snippet__body {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Button */
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.btn--primary {
+  background-color: var(--deepsage);
+  color: white;
+  font-weight: 400;
+}
+
+.btn--primary:hover {
+  background-color: var(--sage);
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 800px) {
+  .snippet {
+    flex-direction: column-reverse;
   }
 
-  .snippet {
-    display: grid;
-    gap: 1em;
-    margin-bottom: 50px;
-    grid-template-areas:
-      "image"
-      "title"
-      "meta"
-      "body"
-      "button";
+  .snippet__image-link {
+    width: 100%; /* Image takes full width on small screens */
+    aspect-ratio: auto;
+    height: auto;
   }
 
   .snippet__image {
-    grid-area: image;
-    width: 70%;
-    aspect-ratio: 4 / 3;
+    width: 100%;
+    height: auto;
+    max-height: 300px; 
     object-fit: cover;
-
+    border-radius: 0;
   }
-  .snippet__title {
-    grid-area: title;
-  }
-  .snippet__meta {
-    grid-area: meta;
-    color: var(--text);
-  }
+}
 
-  .snippet__meta span {
-    color: var(--sage);
-  }
-
-  .snippet .btn {
-    grid-area: button;
-  }
-
-  .snippet__title {
-    color: var(--deepsage);
-    font-size: 25px;
-  }
-
-  .snippet__title a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .snippet__title a:hover,
-  .snippet__title a:focus {
-    color: var(--sage);
-  } 
-
-  @media (min-width: 45em) {
-    .snippet {
-      grid-template-areas:
-        "title image"
-        "meta image"
-        "body image"
-        "button image";
-      grid-column-gap: 4em;
-      grid-template-columns: 1fr, 40%;
-      grid-template-rows: min-content min-content min-content 1fr;
-      
-    }
-  }
-
-  .btn {
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    line-height: 1;
-    padding: 0.75em 1.75em;
-    border-radius: 0.25em;
-    align-self: start;
-    justify-self: start;
-  }
-
-
-  .btn--primary {
-    background: var(--deepsage);
-    color: white;
-  }
-
-  .btn--primary:hover,
-  .btn--primary:focus {
-    background: var(--sage);
-  }
 
 /* Remove default margin */
   body,
@@ -488,6 +522,13 @@ footer{
     object-fit: cover; 
   }
 
-.featured-articles h1{
+  .featured-articles h1{
   padding-top: 50px;
+  }
+
+.container--narrow {
+  max-width: 45rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }

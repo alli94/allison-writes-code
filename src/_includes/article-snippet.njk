@@ -1,9 +1,23 @@
- <li>
+ {# <li>
     <article class="snippet">
-      <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="snippet__image">
+      <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}"  class="snippet__image"><a class="snippet__image" href="{{ post.url }}"></a></img>
       <h3 class="snippet__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
       <p class="snippet__meta">by <span>{{ post.data.author }}</span> on <span>{{ post.date | postDate}}</span></p>
       <p class="snippet__body">{{ post.data.description }}</p>
       <a href="{{ post.url }}" class="btn btn--primary">Continue Reading</a>
     </article>
-    </li>
+    </li> #}
+
+    <article class="snippet">
+  <div class="snippet__content">
+    <h3 class="snippet__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+    <p class="snippet__meta">by <span>{{ post.data.author }}</span> on <span>{{ post.date | postDate}}</span></p>
+    <p class="snippet__body">{{ post.data.description }}</p>
+    <a href="{{ post.url }}" class="btn btn--primary">Continue Reading</a>
+  </div>
+    <a href="{{ post.url }}" class="snippet__image-link">
+    <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="snippet__image" />
+  </a>
+</article>
+
+
