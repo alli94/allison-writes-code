@@ -44,7 +44,7 @@ layout: 'base.njk'
 
 <section id="featured-articles" class="featured-articles">
   <div class="container flow">
-    <h1 class="section-title text-center ">Featured articles</h1>
+    <h1 class="section-title text-center ">Featured Posts</h1>
    <ul role="list" class="articles__list flow">
   {%- for post in collections.featured | reverse -%} <!--may need to    adjust-->
   {% include "article-snippet.njk" %}

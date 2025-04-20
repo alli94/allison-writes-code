@@ -20,7 +20,7 @@
         <li><a href="/about/">About</a></li>
         <li><a href="https://github.com/alli94" target="_blank" rel="noopener noreferrer" class="fa-icon github"><i class="fab fa-github"></i></a></li>
         <!--<li><a href="https://www.linkedin.com/in/allisonrm/" target="_blank" rel="noopener noreferrer"class="fa-icon linkedin"><i class="fab fa-linkedin-in"></i></a></li>-->
-        <li><a href="https://instagram.com/__andmake" target="_blank" rel="noopener noreferrer" class="fa-icon instagram">
+        <li><a href="https://instagram.com/allisontravelshere" target="_blank" rel="noopener noreferrer" class="fa-icon instagram">
             <i class="fab fa-instagram"></i>
           </a></li>
         </ul>
@@ -41,9 +41,46 @@
     <p>Testing, testing, 1,2,3! Let's hope this works :)
 &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&quot;</p>
 
-  
+   
 </div>
 </article>
+<div class="comment-section">
+
+
+
+<h2>Leave a comment</h2>
+<p>
+  Comments posted here will go into a moderation queue and the owner of the site will be notified via email.
+  Once approved, it will be pulled into the content and the site will be regenerated and deployed.
+</p>
+
+
+<form name="comments-queue" netlify-honeypot="full-name" netlify>
+  <p class="honey">
+    <input name="path" type="hidden" value="/posts/testing-the-cms-2025-04-15/">
+    <label>Your full name: <input name="full-name"></label>
+  </p>
+  <p>
+    <label for="name">Your name<small>What should I call you?</small></label>
+    <input type="text" name="name" id="name">
+  </p>
+  <p>
+    <label for="email">Your email<small>I'll never spam you, promise!</small></label>
+    <input type="email" name="email" id="email">
+  </p>
+  <p>
+    <label for="comment">Your comment<small>Markdown is okey-dokey.</small></label>
+    <textarea name="comment" id="comment"></textarea>
+  </p>
+  <p>
+    <button type="submit" class="btn">Post your comment</button>
+  </p>
+</form>
+
+
+<div class="comments">
+
+</div>
 
         </div>
     </main>
