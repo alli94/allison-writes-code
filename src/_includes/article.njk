@@ -16,19 +16,16 @@ layout: 'base.njk'
    
 </div>
 </article>
-<div class="comment-section">
-{# Unless we have disabled comments for this page, add a comments form #}
-{% if commentsClosed != true %}
-{% include "comment-form.njk" -%}
-{% else %}
-  <div class="footnote">
-    <p>
-      comments on this page are now closed. Perhaps express your opinions about this <a href="https://twitter.com/intent/tweet?text=I%20need%20to%20tell%20the%20world%20about%20this!&url={{ init.rootURL }}{{ page.url }}">on twitter</a> instead?
-    </p>
-  </div>
-{% endif %}
+<!-- ... your article content ... -->
 
-<div class="comments">
-{# Add the any comments we have stashed for this page #}
-{% include "comments.njk" -%}
-</div>
+<hr>
+<h2>💬 Comments</h2>
+<div class="commentbox"></div>
+
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>
+  commentBox('5721603186884608-proj', {
+    className: 'commentbox',
+    defaultBoxId: '{{ page.url }}'
+  })
+</script>
