@@ -1,10 +1,9 @@
 {# Updated changes to config #}
 
-<div class="note">
-
-## You've still got a little config to do
-
-It looks like you are just setting this up in a new site on Netlify. Woohoo!
+<div class="note bg-yellow-100 border-l-4 border-yellow-400 text-yellow-800 p-4 rounded-md">
+  <h2 class="text-lg font-semibold">⚙️ You've still got a little config to do</h2>
+  <!-- content -->
+</div>
 
 {% if environment["Allison_Writes_Code"] %}
   {% set envHelpLink = "https://app.netlify.com/sites/" + environment["Allison_Writes_Code"] + "/settings/deploys#build-environment-variables" %}
@@ -25,11 +24,6 @@ Grants permission to use the Forms API. Get this by [creating a new Personal Acc
 
 In order to have the notifications appear in Slack, you'll need to create a Slack app with a webhook URL. [Here's how](https://api.slack.com/messaging/webhooks).
 {% endif %}
-
-<div class="note bg-yellow-100 border-l-4 border-yellow-400 text-yellow-800 p-4 rounded-md">
-  <h2 class="text-lg font-semibold">⚙️ You've still got a little config to do</h2>
-  <!-- content -->
-</div>
 
 
 </div>

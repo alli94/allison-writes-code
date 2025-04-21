@@ -1,69 +1,69 @@
-// Updated function with environment variable for Slack webhook
-require('dotenv').config();
+// // Updated function with environment variable for Slack webhook
+// require('dotenv').config();
 
-const request = require('request');
+// const request = require('request');
 
-const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL; // Get this from the env variable
+// const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL; // Get this from the env variable
 
-export function handler(event, context, callback) {
-  const body = JSON.parse(event.body);
+// export function handler(event, context, callback) {
+//   const body = JSON.parse(event.body);
 
-  const slackPayload = {
-    text: `New comment on the site: ${body.data.path}`,
-    attachments: [
-      {
-        fallback: "New comment on the site",
-        color: "#444",
-        author_name: body.data.email,
-        title: body.data.path,
-        title_link: `https://your-site-url.com${body.data.path}`,
-        text: body.data.comment,
-      },
-      {
-        fallback: "Manage comments on the site",
-        callback_id: "comment-action",
-        actions: [
-          {
-            type: "button",
-            text: "Approve comment",
-            name: "approve",
-            value: body.id,
-          },
-          {
-            type: "button",
-            style: "danger",
-            text: "Delete comment",
-            name: "delete",
-            value: body.id,
-          },
-        ],
-      },
-    ],
-  };
+//   const slackPayload = {
+//     text: `New comment on the site: ${body.data.path}`,
+//     attachments: [
+//       {
+//         fallback: "New comment on the site",
+//         color: "#444",
+//         author_name: body.data.email,
+//         title: body.data.path,
+//         title_link: `https://your-site-url.com${body.data.path}`,
+//         text: body.data.comment,
+//       },
+//       {
+//         fallback: "Manage comments on the site",
+//         callback_id: "comment-action",
+//         actions: [
+//           {
+//             type: "button",
+//             text: "Approve comment",
+//             name: "approve",
+//             value: body.id,
+//           },
+//           {
+//             type: "button",
+//             style: "danger",
+//             text: "Delete comment",
+//             name: "delete",
+//             value: body.id,
+//           },
+//         ],
+//       },
+//     ],
+//   };
 
-  // Post the notification to Slack
-  request.post(
-    {
-      url: SLACK_WEBHOOK_URL,
-      json: slackPayload,
-    },
-    function (err, httpResponse, body) {
-      if (err) {
-        console.error('Failed to post to Slack:', err);
-        callback(null, {
-          statusCode: 500,
-          body: 'Failed to send Slack notification',
-        });
-      } else {
-        console.log('Posted to Slack successfully!');
-        callback(null, {
-          statusCode: 200,
-          body: 'Notification sent to Slack!',
-        });
-      }
-    }
-  );
-}
+//   // Post the notification to Slack
+//   request.post(
+//     {
+//       url: SLACK_WEBHOOK_URL,
+//       json: slackPayload,
+//     },
+//     function (err, httpResponse, body) {
+//       if (err) {
+//         console.error('Failed to post to Slack:', err);
+//         callback(null, {
+//           statusCode: 500,
+//           body: 'Failed to send Slack notification',
+//         });
+//       } else {
+//         console.log('Posted to Slack successfully!');
+//         callback(null, {
+//           statusCode: 200,
+//           body: 'Notification sent to Slack!',
+//         });
+//       }
+//     }
+//   );
+// }
 
 
 

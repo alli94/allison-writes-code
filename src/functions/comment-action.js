@@ -1,97 +1,97 @@
-// new changes
+// // new changes
 
-var request = require("request");
+// var request = require("request");
 
-// populate environment variables locally
-require('dotenv').config();
-const { NETLIFY_AUTH_TOKEN } = process.env;  // Fetch auth token from env variables
+// // populate environment variables locally
+// require('dotenv').config();
+// const { NETLIFY_AUTH_TOKEN } = process.env;  // Fetch auth token from env variables
 
-// hardcoding URL temporarily
-const URL = "https://awc-dev-mode.netlify.app/";
+// // hardcoding URL temporarily
+// const URL = "https://awc-dev-mode.netlify.app/";
 
-/*
-  delete this submission via the API
-*/
-function purgeComment(id) {
-  var url = `https://api.netlify.com/api/v1/submissions/${id}?access_token=${NETLIFY_AUTH_TOKEN}`;
-  request.delete(url, function(err, response, body) {
-    if (err) {
-      console.log(err);
-      return;
-    }
-    console.log("Comment deleted from queue.");
-  });
-}
+// /*
+//   delete this submission via the API
+// */
+// function purgeComment(id) {
+//   var url = `https://api.netlify.com/api/v1/submissions/${id}?access_token=${NETLIFY_AUTH_TOKEN}`;
+//   request.delete(url, function(err, response, body) {
+//     if (err) {
+//       console.log(err);
+//       return;
+//     }
+//     console.log("Comment deleted from queue.");
+//   });
+// }
 
-/*
-  Handle the lambda invocation
-*/
-export function handler(event, context, callback) {
-  // parse the payload
-  var body = event.body.split("payload=")[1];
-  var payload = JSON.parse(decodeURIComponent(body));  // Use decodeURIComponent instead of unescape
-  var method = payload.actions[0].name;
-  var id = payload.actions[0].value;
+// /*
+//   Handle the lambda invocation
+// */
+// export function handler(event, context, callback) {
+//   // parse the payload
+//   var body = event.body.split("payload=")[1];
+//   var payload = JSON.parse(decodeURIComponent(body));  // Use decodeURIComponent instead of unescape
+//   var method = payload.actions[0].name;
+//   var id = payload.actions[0].value;
 
-  if (method == "delete") {
-    purgeComment(id);
-    callback(null, {
-      statusCode: 200,
-      body: "Comment deleted"
-    });
-  } else if (method == "approve") {
+//   if (method == "delete") {
+//     purgeComment(id);
+//     callback(null, {
+//       statusCode: 200,
+//       body: "Comment deleted"
+//     });
+//   } else if (method == "approve") {
 
-    // get the comment data from the queue
-    var url = `https://api.netlify.com/api/v1/submissions/${id}?access_token=${NETLIFY_AUTH_TOKEN}`;
+//     // get the comment data from the queue
+//     var url = `https://api.netlify.com/api/v1/submissions/${id}?access_token=${NETLIFY_AUTH_TOKEN}`;
 
-    request(url, function(err, response, body) {
-      if (!err && response.statusCode === 200) {
-        var data = JSON.parse(body).data;
+//     request(url, function(err, response, body) {
+//       if (!err && response.statusCode === 200) {
+//         var data = JSON.parse(body).data;
 
-        // now we have the data, let's massage it and post it to the approved form
-        var payload = {
-          'form-name': "approved-comments",
-          'path': data.path,
-          'received': new Date().toString(),
-          'email': data.email,
-          'name': data.name,
-          'comment': data.comment
-        };
-        var approvedURL = URL;
+//         // now we have the data, let's massage it and post it to the approved form
+//         var payload = {
+//           'form-name': "approved-comments",
+//           'path': data.path,
+//           'received': new Date().toString(),
+//           'email': data.email,
+//           'name': data.name,
+//           'comment': data.comment
+//         };
+//         var approvedURL = URL;
 
-        console.log("Posting to", approvedURL);
-        console.log(payload);
+//         console.log("Posting to", approvedURL);
+//         console.log(payload);
 
-        // post the comment to the approved list
-        request.post({ 'url': approvedURL, 'formData': payload }, function(err, httpResponse, body) {
-          if (err) {
-            console.log('Post to approved comments failed:', err);
-            callback(null, {
-              statusCode: 500,
-              body: 'Failed to post to approved comments.'
-            });
-          } else {
-            console.log('Post to approved comments list successful.');
-            purgeComment(id);
+//         // post the comment to the approved list
+//         request.post({ 'url': approvedURL, 'formData': payload }, function(err, httpResponse, body) {
+//           if (err) {
+//             console.log('Post to approved comments failed:', err);
+//             callback(null, {
+//               statusCode: 500,
+//               body: 'Failed to post to approved comments.'
+//             });
+//           } else {
+//             console.log('Post to approved comments list successful.');
+//             purgeComment(id);
 
-            var msg = "Comment registered. Site deploying to include it.";
-            callback(null, {
-              statusCode: 200,
-              body: msg
-            });
-            console.log(msg);
-          }
-        });
-      } else {
-        console.log('Error retrieving comment:', err || body);
-        callback(null, {
-          statusCode: 500,
-          body: 'Failed to retrieve comment for approval.'
-        });
-      }
-    });
-  }
-}
+//             var msg = "Comment registered. Site deploying to include it.";
+//             callback(null, {
+//               statusCode: 200,
+//               body: msg
+//             });
+//             console.log(msg);
+//           }
+//         });
+//       } else {
+//         console.log('Error retrieving comment:', err || body);
+//         callback(null, {
+//           statusCode: 500,
+//           body: 'Failed to retrieve comment for approval.'
+//         });
+//       }
+//     });
+//   }
+// }
 
 
 

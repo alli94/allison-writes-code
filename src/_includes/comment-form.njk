@@ -8,21 +8,21 @@
   Read about <a href="/about">how this works</a>.
 </p> #}
 
-<form name="comments-queue" netlify-honeypot="full-name" netlify>
+<form name="comments-queue" netlify-honeypot="full-name" action="" netlify>
   <p class="honey">
     <input name="path" type="hidden" value="{{ page.url }}">
     <label>Your full name: <input name="full-name"></label>
   </p>
   <p>
-    <label for="name">Your name<small>What should I call you?</small></label>
+    <label for="name">Name</label>
     <input type="text" name="name" id="name">
   </p>
   <p>
-    <label for="email">Your email<small>I'll never spam you, promise!</small></label>
+    <label for="email">Email</label>
     <input type="email" name="email" id="email">
   </p>
   <p>
-    <label for="comment">Your comment<small>Markdown is okey-dokey.</small></label>
+    <label for="comment">Your comment</label>
     <textarea name="comment" id="comment"></textarea>
   </p>
   <p>

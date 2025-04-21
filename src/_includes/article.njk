@@ -16,6 +16,29 @@ layout: 'base.njk'
    
 </div>
 </article>
+
+<form id="commentForm">
+  <input type="text" name="name" placeholder="Your name" required />
+  <textarea name="comment" placeholder="Your comment" required></textarea>
+  <button type="submit">Send</button>
+  <p id="statusMsg"></p>
+</form>
+
+<script src="/main.js"></script>
+
+<h2>Comments</h2>
+<ul>
+  {% for comment in comments %}
+    <li>
+      <strong>{{ comment.name }}</strong>:
+      <blockquote>{{ comment.comment }}</blockquote>
+    </li>
+  {% endfor %}
+</ul>
+
+
+
+<!--
 <div class="comment-section">
 {# Unless we have disabled comments for this page, add a comments form #}
 {% if commentsClosed != true %}
@@ -31,4 +54,4 @@ layout: 'base.njk'
 <div class="comments">
 {# Add the any comments we have stashed for this page #}
 {% include "comments.njk" -%}
-</div>
+</div> -->
