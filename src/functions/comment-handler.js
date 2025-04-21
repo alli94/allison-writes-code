@@ -3,9 +3,9 @@
 var request = require("request");
 
 // populate environment variables locally.
-require('dotenv').config()
+require('dotenv').config();
 
-const URL = "https://allison-writes-code.netlify.app";
+const URL = "https://awc-dev-mode.netlify.app";
 
 /*
   Our serverless function handler
@@ -16,10 +16,12 @@ export function handler(event, context, callback) {
   var body = JSON.parse(event.body);
 
   // prepare call to the Slack API
-  var slackURL = process.env.hooks.slack.com/services/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
+  var slackURL = process.env.SLACK_WEBHOOK_URL
+
+  ;  // Ensure the environment variable is correctly named
   var slackPayload = {
     "text": "New comment on " + URL,
-	  "attachments": [
+    "attachments": [
       {
         "fallback": "New comment on the site",
         "color": "#444",
@@ -46,22 +48,25 @@ export function handler(event, context, callback) {
             "value": body.id
           }
         ]
-      }]
-    };
-
-    // post the notification to Slack
-    request.post({url:slackURL, json: slackPayload}, function(err, httpResponse, body) {
-      var msg;
-      if (err) {
-        msg = 'Post to Slack failed:' + err;
-      } else {
-        msg = 'Post to Slack successful!  Server responded with:' + body;
       }
-      callback(null, {
-        statusCode: 200,
-        body: msg
-      })
-      return console.log(msg);
-    });
+    ]
+  };
 
+  // post the notification to Slack
+  request.post({ url: slackURL, json: slackPayload }, function(err, httpResponse, body) {
+    let msg;
+    if (err) {
+      msg = 'Post to Slack failed: ' + err;
+      console.error(msg);
+    } else {
+      msg = 'Post to Slack successful! Server responded with status code: ' + httpResponse.statusCode + ' and body: ' + JSON.stringify(body);
+      console.log(msg);
+    }
+
+    callback(null, {
+      statusCode: 200,
+      body: msg
+    });
+  });
 }
+
