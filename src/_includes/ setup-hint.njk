@@ -15,15 +15,21 @@ It looks like you are just setting this up in a new site on Netlify. Woohoo!
 You'll just need to ensure the [required environment variables]({{ envHelpLink }}) are set for your site before everything will work.
 
 {% if not environment["NETLIFY_AUTH_TOKEN"] %}
-👉 `nfp_gk8SjmkXyFzX3tfTtMRR5ypaxgzAsddte478`
+👉 `NETLIFY_AUTH_TOKEN`
 
 Grants permission to use the Forms API. Get this by [creating a new Personal Access Token](https://app.netlify.com/account/applications).
 {% endif %}
 
 {% if not environment["SLACK_WEBHOOK_URL"] %}
-👉 `https://hooks.slack.com/services/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`
+👉 `SLACK_WEBHOOK_URL`
 
 In order to have the notifications appear in Slack, you'll need to create a Slack app with a webhook URL. [Here's how](https://api.slack.com/messaging/webhooks).
 {% endif %}
+
+<div class="note bg-yellow-100 border-l-4 border-yellow-400 text-yellow-800 p-4 rounded-md">
+  <h2 class="text-lg font-semibold">⚙️ You've still got a little config to do</h2>
+  <!-- content -->
+</div>
+
 
 </div>
