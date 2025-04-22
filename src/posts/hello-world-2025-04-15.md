@@ -1,7 +1,6 @@
 ---
 title: Hello World!
-description: Cheesy, I know. But here were are! I've finally managed to attach a
-  CMS to my blog! It was not without it's struggles and many frustrating moments
+description: Cheesy, I know. But here were are! I've finally managed to attach a CMS to my blog! It was not without it's struggles and many frustrating moments
 author: Allison
 date: 2025-04-14T22:24:00.000Z
 tags:

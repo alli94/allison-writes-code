@@ -1,12 +1,12 @@
 ---
 title: Testing the CMS
-description: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...'
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...
 author: Allison
 date: 2025-04-14T20:35:00.000Z
 tags:
   - featured
   - post
-image: /assets/uploads/to-helsinki.jpeg
+image: /assets/images/to-helsinki.jpeg
 imageAlt: helsiki project
 ---
 Testing, testing, 1,2,3! Let's hope this works :)
