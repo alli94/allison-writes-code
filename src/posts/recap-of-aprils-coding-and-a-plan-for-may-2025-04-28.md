@@ -30,7 +30,8 @@ All this to say, for the month of May I have a few goals to tweak my site:
 1. Do some styling on the comment box
 2. Figure out the logo color issue so it can be incorporated into my navbar
 3. Create a favicon file to use for the site as well!
-4. Fix gif responsiveness in the about page because it's not centering correctly on smaller screen sizes.
+4. Fix gif responsiveness in the about page because it's not centering correctly on smaller screen sizes
+5. Maybe play around with comment set up
 \
 \
 The next post is gonna focus on my plan for a few projects I've been dying to create. Now that I have my own, completely coded website, launched on the interwebs by myself... what???!! The fun stuff can begin. ✨
