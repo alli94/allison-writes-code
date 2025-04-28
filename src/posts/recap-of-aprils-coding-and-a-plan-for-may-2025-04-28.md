@@ -12,7 +12,7 @@ tags:
 image: /assets/images/korea-workspace.JPG
 imageAlt: unconventional work station
 ---
-Finally got everything sorted! Well almost everything. My perfectionist eye sees every single little detail that needs adjustment. And boy are there plenty of elements that need adjustment. The amount of bugs I ran into and errors from random things not compiling correctly on one day vs another, who knew a static website could hold so many lessons. I've loved every minute of tweaking this website and the tweaks ain't over yet. However, I'm realizing these things are relatively  easy to fix and they aren't always a priority. If you spend too much time focusing on the details, the overall project will never be realized. 
+Finally got everything sorted! Well, almost everything. My perfectionist eye sees every single little detail that needs adjustment. And boy are there plenty of elements that need adjustment. The amount of bugs I ran into and errors from random things not compiling correctly on one day vs another, who knew a static website could hold so many lessons. I've loved every minute of tweaking this website and the tweaks ain't over yet. However, I'm realizing these things are relatively  easy to fix and they aren't always a priority. If you spend too much time focusing on the details, the overall project will never be realized. 
 \
 \
 That being said, I do truly love CSS. I relied heavily on it for the styling of pretty much every layout and component feature. It gives me peace of mind knowing that in the future, all I have to do are a few tweaks and those little formatting issues will be resolved.
