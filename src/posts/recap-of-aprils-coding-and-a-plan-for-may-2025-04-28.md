@@ -8,6 +8,7 @@ author: Allison
 date: 2025-04-28T10:35:00.000Z
 tags:
   - post
+  - feature
 image: /assets/images/korea-workspace.JPG
 imageAlt: unconventional work station
 ---
