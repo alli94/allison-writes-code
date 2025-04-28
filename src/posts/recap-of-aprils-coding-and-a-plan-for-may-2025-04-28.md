@@ -25,8 +25,8 @@ Oh! And I generated a cute little logo with ChatGPT. I'm excited to incorporate 
 \
 \
 All this to say, for the month of May I have a few goals to tweak my site:
-\
-\
+
+
 1. Do some styling on the comment box
 2. Figure out the logo color issue so it can be incorporated into my navbar
 3. Create a favicon file to use for the site as well!
