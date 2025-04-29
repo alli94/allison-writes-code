@@ -20,22 +20,69 @@
     min-height: 100vh;
   }
 
-  header {
-    text-align: center;
-    padding: 2rem;
-  }
-
-  .logo {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--deepsage);
-  }
-
   .tagline {
     font-size: 1.1rem;
     color: var(--sage);
     margin-top: 0.5rem;
   }
+
+
+/* navbar stuff */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  margin: 2rem;
+
+}
+
+.nav-logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  text-decoration: none;
+  color: var(--deepsage);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 20px;
+  padding-top: 5px;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--deepsage);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--sage);
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+  }
+}
 
 /* Card Containers */
 
@@ -91,55 +138,6 @@
     max-width: 65rem;
   }
 
-/* navbar stuff */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 12px;
-    margin-bottom: 1rem;
-  }
-  
-  .nav-logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--deepsage);
-    cursor: default;
-    text-decoration: none;
-    cursor: default;
-  }
-
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: var(--deepsage);
-    font-weight: 500;
-    transition: color 0.2s ease;
-  }
-  
-  .nav-links a:hover {
-    color: var(--sage);
-  }
-  
-
-/* Responsive tweak */
-  @media (max-width: 600px) {
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-      padding: 1rem;
-      border-radius: 10px;
-      margin-top: 0.5rem;
-    }
-  }
-  
 /* welcome, welcome layout */
   .intro-section {
     padding: 0.75rem 1.5rem;

@@ -1,0 +1,30 @@
+---
+layout: 'base.njk'
+---
+
+<article class="main-article">
+<div class="container container--narrow flow">
+    <h1 class="article-title">
+      {{ title }}
+    </h1> 
+        <p>{{ date | postDate}}</p>
+    <figure class="main-article__figure">
+      <img src="{{ image }}" alt="{{ imageAlt }}">
+    </figure>
+    
+    {{ content | safe }}
+</div>
+</article>
+<!-- ... your article content ... -->
+
+<hr>
+<h2>💬 Comments</h2>
+<div class="commentbox"></div>
+
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>
+  commentBox('5721603186884608-proj', {
+    className: 'commentbox',
+    defaultBoxId: '{{ page.url }}'
+  })
+</script>

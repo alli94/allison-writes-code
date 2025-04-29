@@ -1,0 +1,54 @@
+---
+title: Allison Writes Code
+layout: 'base.njk'
+---
+<section class="intro-section">
+  <div class="intro-text">
+    <h1>Journal of a Self-Taught Language Learner and Coder</h1>
+    <p>
+      Writing about my current coding projects, language learning goals, fiber arts projects, and occasional passionate rants about urban development.
+    </p>
+  </div>
+    
+  <div class="polaroid">
+    <div class="intro-photo">
+      <img src="assets/images/market-profile.png" alt="Smiling at the camera" class="image" />
+      <img src="assets/images/ocean-profile.png" alt="Looking for Fuji" class="imagehover" />
+      <p class="caption image">Cheesing at Gwangjang Market in Seoul</p>
+      <p class="caption imagehover">Looking for Mt. Fuji</p>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card" onclick="location.href='/about'">
+      <h2>About Me 🪴</h2>
+      <p>Learn more about my background, passions, and coding journey.</p>
+    </div>
+    <div class="card" onclick="location.href='/projects'">
+      <h2>Projects ✨</h2>
+      <p>Check out some of my web dev and fiber arts projects.</p>
+    </div>
+    <div class="card" onclick="location.href='/blog'">
+      <h2>Blog 👩🏼‍💻</h2>
+      <p>Read up on my current wips and how I'm planning to build my dream app.</p>
+    </div>
+    <div class="card" onclick="location.href='#'">
+      <h2>(un)Tangled 🧶</h2>
+      <p>Follow the development of my stich glossary for fiber artists and hobbyists!</p>
+    </div>
+  </div>
+
+</section> 
+
+  <!-- Featured posts -->
+
+<section id="featured-articles" class="featured-articles">
+  <div class="container flow">
+    <h1 class="section-title text-center ">Featured Posts</h1>
+   <ul role="list" class="articles__list flow">
+  {%- for post in collections.featured | reverse -%} <!--may need to    adjust-->
+  {% include "article-snippet.njk" %}
+  {%- endfor %}
+</ul>
+  </div>
+</section>

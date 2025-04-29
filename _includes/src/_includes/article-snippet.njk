@@ -1,0 +1,17 @@
+   <article class="snippet">
+  <div class="snippet__content">
+    <h3 class="snippet__title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+    <p class="snippet__meta">by <span>{{ post.data.author }}</span> on <span>{{ post.date | postDate}}</span></p>
+    {# <p class="snippet__tags">
+      {% for tag in post.data.tags %} 
+        <a href="/tags/{{ tag | slugify }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+      {% endfor %} #}
+    <p class="snippet__body">{{ post.data.description }}</p>
+    <a href="{{ post.url }}" class="btn btn--primary">Continue Reading</a>
+  </div>
+    <a href="{{ post.url }}" class="snippet__image-link">
+    <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="snippet__image" />
+  </a>
+</article>
+
+
