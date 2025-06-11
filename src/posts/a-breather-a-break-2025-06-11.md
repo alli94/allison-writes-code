@@ -29,7 +29,7 @@ May was cables month and birthday month and existential crisis month. I came to 
 Anyways, a bit demotivated from coding during May. The learning curve is great and I feel that I would greatly benefit from being mentored and working on projects with others to continue developing. Hoping to find more opportunities for collaboration in the future but for now, I'm planning on carving out time each week to devote to learning and developing my knitting app.
 \
 \
-<img src="/assets/images/img_7541.jpeg" width="200" alt="French learning record found at a record shop">
+<img src="/assets/images/img_7541.jpeg" width="200" alt="French learning record found at a record shop" style="display: block; margin: 0 auto">
 
 \
 \
