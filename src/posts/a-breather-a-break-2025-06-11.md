@@ -7,6 +7,7 @@ author: Allison
 date: 2025-06-11T11:47:00.000Z
 tags:
   - post
+  - featured
 image: /assets/images/img_7550.jpeg
 imageAlt: Too many cables ㅠㅠ
 ---
