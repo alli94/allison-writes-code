@@ -31,5 +31,4 @@ Anyways, a bit demotivated from coding during May. The learning curve is great a
 \
 <img src="/assets/images/img_7541.jpeg" width="300" alt="French learning record found at a record shop" style="display: block; margin: 0 auto">
 \
-\
 My languages have also been lacking lately. Work and trying to figure out next steps career-wise have taken priority. But last week, I walked into a record shop and found this French learning record! Instant purchase. Now I just gotta buy a record player... something to listen to while working on my next fiber arts project!
