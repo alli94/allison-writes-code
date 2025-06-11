@@ -1,5 +1,5 @@
 # Allison Writes Code (a blog and portfolio of sorts)
-Build my own responsive website using html, css, a sprinkling of javascript, 
+Built my own responsive website using html, css, a sprinkling of javascript, 
 and a CMS for easier blog hosting. Also figured out how to use Nunjucks and 11ty
 to create templates. After previously experimenting with Astro and feeling way 
 out of my depth, Kevin Powell's tutorial with 11ty has helped tremendously in 
