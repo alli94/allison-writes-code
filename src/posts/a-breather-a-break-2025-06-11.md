@@ -29,7 +29,7 @@ May was cables month and birthday month and existential crisis month. I came to 
 Anyways, a bit demotivated from coding during May. The learning curve is great and I feel that I would greatly benefit from being mentored and working on projects with others to continue developing. Hoping to find more opportunities for collaboration in the future but for now, I'm planning on carving out time each week to devote to learning and developing my knitting app.
 
 
-![French learning record found at a record shop]<img src="/assets/images/img_7541.jpeg" width="200">
+![French learning record found at a record shop](/assets/images/img_7541.jpeg =100x200)
 
 
 My languages have also been lacking lately. Work and trying to figure out next steps career-wise have taken priority. But last week, I walked into a record shop and found this French learning record! Instant purchase. Now I just gotta buy a record player... something to listen to while working on my next fiber arts project!
